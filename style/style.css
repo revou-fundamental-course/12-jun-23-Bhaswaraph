@@ -1,0 +1,148 @@
+body {
+    margin: 0;
+    background-image: url("/temperature/img/bg.jpg");
+    font-family: sans-serif;
+    text-align: center;
+    padding: 2em;
+    color: rgb(0, 0, 0);
+    /* Lakukan set up backgorund, font dan set text to center pada body  */
+}
+
+.title {
+    font-size: 3em;
+    margin-bottom: 2em;
+    color: #222;
+    /* styling pada judul */
+}
+
+.panels {
+    justify-content: center;
+    align-items: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    display: flex;
+    /* setting display box / panel yang akan berisikan banyak unit */
+}
+
+.unit {
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    min-width: 15em;
+    height: 13em;
+    position: relative;
+    /* styling unit agar berbentuk seperti box dengan ukuran tertentu */
+}
+
+.unit:nth-child(1) {
+    background: #ffe100;
+    /* styling warna pada masing masing unit */
+}
+
+.unit:nth-child(2) {
+    background: #ff3700;
+    /* styling warna pada masing masing unit */
+}
+
+.unit:nth-child(3) {
+    background: #0088ff;
+    /* styling warna pada masing masing unit */
+}
+
+
+.bg-panel {
+    margin: 0;
+    top: 50%;
+    left: 50%;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    font-size: 10em;
+    z-index: 0;
+    pointer-events: none;
+    /* styling pada background pada box, akan tampak simbol setiap suhu pada background box */
+}
+
+.unit:nth-child(1) .bg-panel {
+    color: #ffee54;
+    /* styling warna background pada box agar terlihat efek transparant */
+}
+
+.unit:nth-child(2) .bg-panel {
+    color: #ff673d;
+    /* styling warna background pada box agar terlihat efek transparant */
+}
+
+.unit:nth-child(3) .bg-panel {
+    color: #3aa0f9;
+    /* styling warna background pada box agar terlihat efek transparant */
+}
+
+.unit h2, .unit input {
+    position: relative;
+    /* styling posisi pada nama suhu tiap box dan input nya */
+}
+
+.unit h2 {
+    text-align: center;
+    color: #fff;
+    /* styling warna pada teks nama suhu */
+}
+/* -> */
+.unit input::-webkit-outer-spin-button,
+.unit input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.unit input {
+    border: none;
+    background: none;
+    margin-top: 0.5em;
+    width: 4em;
+    height: 2em;
+    font-size: 2.8em;
+    font-weight: 600;
+    text-align: center;
+    color: #fff;
+}
+
+.unit input:focus {
+    outline: none;
+}
+
+/* styling agar input terlihat transparant <- */
+
+footer {
+    clear: both;
+    position: relative;
+    height: 20px;
+    top: 21em;
+    /* styling footer */
+}
+
+.explanasi {
+    bottom: -10em;
+    position: relative;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+    min-width: 15em;
+    max-width: 30em;
+    max-height: 15em;
+    position: relative;
+    background-color: #fff;
+    margin: auto;
+    padding: 0.9em;
+    /* styling pada penjelasan */
+}
+
+.explanasi p{
+    text-align: center;
+    bottom: 100%;
+    font-weight: 500;
+    /* styling pada penjelasan */
+}
+
+footer p{
+    font-size: 0.9em;
+    font-weight: 600;
+    /* styling footer */
+}
